@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
-@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 * {
     margin: 0;
     padding: 0;
@@ -289,21 +287,6 @@ body > span {
     font-weight: 900;
   }
   
-  .slides .slick-prev,
-  .slides .slick-next {
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    background-color: black;
-  }
-  
-  .slides .slick-prev {
-    left: 5%;
-  }
-  
-  .slides .slick-next {
-    right: 5%;
-  }
   .day-width{
       width: 125px;
       height: 125px;
