@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Jost", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Jost", sans-serif;
+    overflow: hidden;
+    background-image: url("../css/lightrain.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow-y: scroll;
+}
+
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+.box {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+}
+
+.wave {
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: #fff;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+
+.wave.-three {
+    animation: drift 7000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+
+.wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+}
+
+.box::after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+.info {
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 140px;
+}
+
+.location {
+    margin-top: -5.5rem;
+    text-align: left;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.fa-map-marker-alt{
+    padding-right: 5px;
+}
+
+.real-time{
+    color: #fff;
+}
+
+.weather-img{
+    width: 120px;
+}
+
+.fa-street-view {
+    animation: rotates 3s linear infinite ease;
+}
+
+@keyframes rotates {
+    from {
+        transform: translateX(-0.5rem);
+    }
+    from {
+        transform: translateX(0.5rem);
+    }
+}
+
+#date {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #57606f;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.temperature{
+    display: flex;
+}
+
+.temp {
+    font-size: 5rem;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.fa-circle{
+    font-size: 24px;
+    vertical-align: text-top;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.unit{
+    color: #fff;
+}
+
+.temp-desc{
+    font-size: 24px;
+    vertical-align: text-top;
+    margin-top: 30px;
+    margin-left: 40px;
+    color: #fff;
+}
+.extra-info{
+    color: #fff;
+    font-size: 8px;
+    padding-left: 20px;
+}
+
+.fas{
+    font-size: 20px;
+}
+.wind{
+    margin-left: 30px;
+}
+
+.extra-info-desc{
+    padding-left: 20px;
+}
+
+.forecast {
+    padding-top: 50px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.feels-like,.display-flex{
+    display: flex;
+}
+
+.tempmin_max {
+    text-align: center;
+    margin-top: 0.3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #57606f;
+}
+
+#weathercon {
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+#weathercon .fas {
+    font-size: 6rem;
+    animation: fas-anime 3s linear infinite alternate;
+}
+
+@keyframes fas-anime {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1.5)
+    }
+}
+
+@media (max-width: 600px) {
+    .box {
+        width: 90vw;
+        height: 80vh;
+    }
+
+    .wave {
+        top: 85%;
+    }
+
+    #weathercon {
+        font-size: 5em;
+    }
+
+    .info {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 500px) {
+    .box {
+        height: 80vh;
+    }
+
+    .wave {
+        top: 115%;
+    }
+}
+
+body > span {
+    width: 100vw;
+    text-align: center;
+    color: grey;
+}
+
+.inputData {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField {
+    width: 100%;
+    margin: auto;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+.errorMsg {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
+
+.wrapper {
+    display: flex !important;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+  }
+  
+  .sliderImg {
+    box-sizing: border-box;
+    height: 300px;
+    width: 400px;
+    padding: 0px 2vw;
+    object-fit: cover;
+  }
+  
+  .imgTitle {
+    font-weight: 900;
+  }
+  
+  .slides .slick-prev,
+  .slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background-color: black;
+  }
+  
+  .slides .slick-prev {
+    left: 5%;
+  }
+  
+  .slides .slick-next {
+    right: 5%;
+  }
+  .day-width{
+      width: 125px;
+      height: 125px;
+      margin-right: 10px;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .day-width h3{
+    padding-top: 10px;  
+    text-align: center;
+  }
+  .day-forecast{
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 4;
+  }
+  .forecast-img {
+      width: 20px;
+  }
+  .forecast-degree {
+      font-size: 3px;
+      margin-top: 4px;
+      margin-right: 3px;
+      margin-left: 5px;
+  }
+  .forecast-temp {
+      margin-left: 8px;
+  }
+  .extra-forecast{
+      text-align: center;
+  }
