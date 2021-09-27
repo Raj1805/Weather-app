@@ -6,7 +6,7 @@ import Dayforecast from "./Dayforecast";
 const Main = () => {
 // api did not work but I tried the coding
 //const [city, setCity ] = useState(null); 
-//const [search, setSearch] = useState("Mumbai");
+const [search, setSearch] = useState("Mumbai");
 
 
 // useEffect( () => {
