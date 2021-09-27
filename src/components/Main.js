@@ -4,22 +4,22 @@ import Dayforecast from "./Dayforecast";
 
 
 const Main = () => {
+// api did not work but I tried the coding
+//const [city, setCity ] = useState(null); 
+//const [search, setSearch] = useState("Mumbai");
 
-const [city, setCity ] = useState(null); 
-const [search, setSearch] = useState("Mumbai");
 
-
-useEffect( () => {
-    const fetchApi = async () => {
-        const url=`http://api.openweathermap.org/data/2.5/weather?q=&${search}appid={0767357105cb56b926476bab14cbc90d}`
-        const response = await fetch(url)
-        const resJson = await response.json();
-        console.log(response);
-        setCity(resJson);
+// useEffect( () => {
+//     const fetchApi = async () => {
+//         const url=`http://api.openweathermap.org/data/2.5/weather?q=&${search}appid={0767357105cb56b926476bab14cbc90d}`
+//         const response = await fetch(url)
+//         const resJson = await response.json();
+//         console.log(response);
+//         setCity(resJson);
     
-    };
-    fetchApi();
-},[search] )
+//     };
+//     fetchApi();
+// },[search] )
 
     return (
         <>
